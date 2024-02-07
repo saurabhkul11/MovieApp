@@ -3,7 +3,6 @@ package com.example.movieapp.MovieList
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.Toast
@@ -12,10 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieapp.MovieDetails.MovieDetailActivity
 import com.example.movieapp.R
-import com.example.movieapp.api.ApiService
-import com.example.movieapp.api.RetrofitHelper
 import com.example.movieapp.databinding.ActivityHomeBinding
-import com.example.movieapp.utils.Constants
 import com.example.movieapp.utils.RecyclerItemClickListener
 import com.example.movieapp.utils.State
 import dagger.hilt.android.AndroidEntryPoint
@@ -83,9 +79,7 @@ class HomeActivity : AppCompatActivity() {
 
 
     private fun setupViewModel() {
-
         viewModel=ViewModelProvider(this).get(MovieViewModel::class.java)
-
     }
 
     private fun initializeObserver() {

@@ -8,8 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.movieapp.api.ApiService
-import com.example.movieapp.api.RetrofitHelper
 import com.example.movieapp.databinding.ActivityMovieDetailBinding
 import com.example.movieapp.utils.Constants
 import com.example.movieapp.utils.State
@@ -46,9 +44,6 @@ class MovieDetailActivity: AppCompatActivity() {
 
 
     private fun setupViewModel() {
-//        val api= RetrofitHelper.getInstance().create(ApiService::class.java)
-//        viewModel=ViewModelProvider(this,MovieDetailViewModelFactory(MovieDetailRepository(api))).get(MovieDetailViewModel::class.java)
-
         viewModel=ViewModelProvider(this).get(MovieDetailViewModel::class.java)
     }
 
